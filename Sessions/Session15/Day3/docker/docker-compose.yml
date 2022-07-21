@@ -14,10 +14,10 @@ services:
       - DB_PASSWORD=${DB_PASSWORD}
     volumes:
       - ./database/psql-init/db.sql:/docker-entrypoint-initdb.d/db.sql
-      - ../IMDB-directors.csv:/docker-entrypoint-initdb.d/IMDB-directors.csv
       - ../IMDB-movies.csv:/docker-entrypoint-initdb.d/IMDB-movies.csv
       - ../IMDB-movies_directors.csv:/docker-entrypoint-initdb.d/IMDB-movies_directors.csv
       - ../IMDB-movies_genres.csv:/docker-entrypoint-initdb.d/IMDB-movies_genres.csv
+      - ../IMDB-directors.csv:/docker-entrypoint-initdb.d/IMDB-directors.csv
       - postgres_data:/var/lib/postgresql/data/
 
   pgadmin:
